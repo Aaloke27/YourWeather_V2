@@ -25,41 +25,6 @@ fun CurrentWeatherSection(
     weather: CurrentWeatherUi
 ) {
 
-    Column(
-        modifier = Modifier.fillMaxWidth(),
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
 
-        Row(
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-
-            Text(
-                text = "${weather.currentTemp}°C",
-                style = MaterialTheme.typography.displayMedium,
-                fontWeight = FontWeight.Bold
-            )
-
-            Spacer(
-                modifier = Modifier.width(8.dp)
-            )
-
-            Icon(
-                imageVector = Icons.Default.WbSunny,
-                contentDescription = null,
-                modifier = Modifier.size(40.dp)
-            )
-
-        }
-
-        Spacer(
-            modifier = Modifier.height(8.dp)
-        )
-
-        Text(
-            text = "H: ${weather.highTemp}°C | L: ${weather.lowTemp}°C"
-        )
-
-    }
 
 }
