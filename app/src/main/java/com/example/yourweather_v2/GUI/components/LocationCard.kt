@@ -25,7 +25,7 @@ fun LocationCard(
 ) {
     Box(
         modifier = Modifier
-            .fillMaxHeight(0.30f)
+            .fillMaxHeight(0.1f)
             .fillMaxWidth()
             .padding(horizontal = 12.dp)
             .shadow(
