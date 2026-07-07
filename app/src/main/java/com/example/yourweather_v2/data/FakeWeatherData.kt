@@ -12,6 +12,7 @@ object FakeWeatherData {
         lowTemp = 16,
         humidity = 85,
         windSpeed = 12,
+        precipitation = 70,
 
         forecast = listOf(
             ForecastUi(

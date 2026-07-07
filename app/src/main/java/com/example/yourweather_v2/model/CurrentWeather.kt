@@ -7,5 +7,6 @@ data class CurrentWeatherUi(
     val lowTemp: Int,
     val humidity: Int,
     val windSpeed: Int,
+    val precipitation: Int,
     val forecast: List<ForecastUi>
 )
