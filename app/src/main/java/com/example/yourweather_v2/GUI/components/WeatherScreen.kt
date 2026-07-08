@@ -21,6 +21,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.example.yourweather_v2.data.FakeWeatherData
 import com.example.yourweather_v2.viewModel.WeatherViewModel
 import java.nio.file.WatchEvent
 
@@ -50,6 +51,8 @@ fun WeatherScreen(
             CurrentWeatherSection(weather)
                 Spacer(modifier = Modifier.height(20.dp))
                 CurrentDataCards(weather)
+                Spacer(modifier = Modifier.height(20.dp))
+                UpcomingDataCards(FakeWeatherData)
              }
         }
 
