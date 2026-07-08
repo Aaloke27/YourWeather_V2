@@ -1,7 +1,9 @@
 package com.example.yourweather_v2.model
 
+import androidx.compose.ui.graphics.vector.ImageVector
+
 data class ForecastUi(
     val day: String,
-    val temperature: Int,
-    val icon: Int
+    val icon: ImageVector,
+    val temperature: Int
 )
