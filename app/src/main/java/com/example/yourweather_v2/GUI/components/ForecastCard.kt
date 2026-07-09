@@ -30,7 +30,7 @@ fun ForecastCard(
 ){
     Card(
         modifier = Modifier
-            .width(75.dp)
+            .width(85.dp)
             .height(145.dp)
             .padding(horizontal = 2.dp),
         shape = RoundedCornerShape(22.dp),

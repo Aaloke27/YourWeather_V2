@@ -1,10 +1,17 @@
 package com.example.yourweather_v2.data
 
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.WbTwilight
+import androidx.compose.material.icons.outlined.AlignVerticalBottom
 import androidx.compose.material.icons.outlined.Cloud
+import androidx.compose.material.icons.outlined.CloudUpload
+import androidx.compose.material.icons.outlined.DeviceThermostat
+import androidx.compose.material.icons.outlined.RemoveRedEye
 import androidx.compose.material.icons.outlined.WbSunny
+import com.example.yourweather_v2.R
 import com.example.yourweather_v2.model.CurrentWeatherUi
 import com.example.yourweather_v2.model.ForecastUi
+import com.example.yourweather_v2.model.PresentDataSet
 
 object FakeWeatherData {
 
@@ -33,7 +40,7 @@ object FakeWeatherData {
             ForecastUi(
                 day = "Mon",
                 temperature = 30,
-                icon =  Icons.Outlined.Cloud
+                icon = Icons.Outlined.Cloud
             ),
 
             ForecastUi(
@@ -42,21 +49,25 @@ object FakeWeatherData {
                 icon = Icons.Outlined.WbSunny
             ),
 
-            ForecastUi("Wed",
+            ForecastUi(
+                "Wed",
                 Icons.Outlined.Cloud,
                 26
             ),
 
-            ForecastUi("Thu",
+            ForecastUi(
+                "Thu",
                 Icons.Outlined.WbSunny,
                 24
             ),
 
-                    ForecastUi("Thu",
-            Icons.Outlined.WbSunny,
-            24
-        ),
-            ForecastUi("Thu",
+            ForecastUi(
+                "Thu",
+                Icons.Outlined.WbSunny,
+                24
+            ),
+            ForecastUi(
+                "Thu",
                 Icons.Outlined.WbSunny,
                 24
             ),
@@ -73,6 +84,45 @@ object FakeWeatherData {
                 icon = Icons.Outlined.WbSunny
             ),
 
+            ),
+        presentDataSet = listOf(
+
+            PresentDataSet(
+                icon = Icons.Outlined.DeviceThermostat,
+                value = "Feels Like",
+                data = "24°C"
+            ),
+
+            PresentDataSet(
+                icon = Icons.Outlined.RemoveRedEye,
+                value = "Visibility",
+                data = "5 km"
+            ),
+
+            PresentDataSet(
+                icon = Icons.Outlined.AlignVerticalBottom,
+                value = "Pressure",
+                data = "1012 hPa"
+            ),
+
+            PresentDataSet(
+                icon = Icons.Filled.WbTwilight,
+                value = "Sunrise",
+                data = "6:12 AM"
+            ),
+
+            PresentDataSet(
+                icon = Icons.Outlined.Cloud,
+                value = "AQI",
+                data = "104"
+            ),
+
+            PresentDataSet(
+                iconRes = R.drawable.sunset,
+                value = "Sunset",
+                data = "6:02 PM"
+            )
         )
+
     )
 }

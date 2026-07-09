@@ -35,6 +35,7 @@ fun CurrentDataCards(
             verticalAlignment = Alignment.CenterVertically,
             modifier = Modifier
                 .weight(1f)
+                .height(65.dp)
                 .clip(shape = RoundedCornerShape(38.dp))
                 .background(Color.White)
                 .padding(start = 12.dp)
@@ -48,7 +49,7 @@ fun CurrentDataCards(
             )
             Column(
                 verticalArrangement = Arrangement.spacedBy((-4).dp),
-                horizontalAlignment = Alignment.CenterHorizontally,
+                horizontalAlignment = Alignment.Start,
             ) {
                 Text(
                     text = "Wind",
@@ -57,13 +58,7 @@ fun CurrentDataCards(
                     fontWeight = FontWeight.SemiBold
                 )
                 Text(
-                    text = "${currentData.windSpeed}km/h",
-                    color = Color.Black,
-                    fontSize = 16.sp,
-                    fontWeight = FontWeight.SemiBold
-                )
-                Text(
-                    text = "NE",
+                    text = "${currentData.windSpeed}km/h (NE)",
                     color = Color.Black,
                     fontSize = 16.sp,
                     fontWeight = FontWeight.SemiBold
@@ -99,10 +94,10 @@ fun CurrentDataCards(
                     fontWeight = FontWeight.SemiBold
                 )
                 Text(
-                    text = "Precipitation: ${currentData.precipitation}%",
+                    text = "Rain: ${currentData.precipitation}%",
                     color = Color.Black,
                     fontSize = 16.sp,
-                    fontWeight = FontWeight.Light
+                    fontWeight = FontWeight.Normal
                 )
             }
         }
