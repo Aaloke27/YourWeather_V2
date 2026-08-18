@@ -1,11 +1,9 @@
 package com.example.yourweather_v2.GUI.components
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.gestures.scrollable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -24,7 +22,6 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.yourweather_v2.data.FakeWeatherData
 import com.example.yourweather_v2.viewModel.WeatherViewModel
-import java.nio.file.WatchEvent
 
 @Composable
 fun WeatherScreen(
