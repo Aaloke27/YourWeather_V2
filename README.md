@@ -86,10 +86,6 @@ WeatherAppV2/
 * Additional weather statistics
 * Improved UI polish
 
-## 📸 Screenshots
-
-Add screenshots here
-
 ## 👨‍💻 Author
 
 Built by Aaloke Das as part of learning and improving Android development skills.
