@@ -1,9 +1,12 @@
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.compose)
 }
 
 android {
+
     namespace = "com.example.yourweather_v2"
     compileSdk {
         version = release(37) {
@@ -19,6 +22,23 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+
+        val localProperties = Properties()
+        val localPropertiesFile = rootProject.file("local.properties")
+
+        if (localPropertiesFile.exists()) {
+            localPropertiesFile.inputStream().use {
+                localProperties.load(it)
+            }
+        }
+
+        buildConfigField(
+            "String",
+            "OPENWEATHER_API_KEY",
+            "\"${localProperties.getProperty("OPENWEATHER_API_KEY", "")}\""
+        )
+
     }
 
     buildTypes {
@@ -34,7 +54,10 @@ android {
     }
     buildFeatures {
         compose = true
+        buildConfig = true
     }
+
+
 }
 
 dependencies {

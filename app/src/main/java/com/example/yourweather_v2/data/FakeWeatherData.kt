@@ -16,7 +16,7 @@ import com.example.yourweather_v2.model.PresentDataSet
 object FakeWeatherData {
 
     val weather = CurrentWeatherUi(
-        city = "Khardah",
+        city = "Loading...",
         currentTemp = 24,
         highTemp = 26,
         lowTemp = 16,

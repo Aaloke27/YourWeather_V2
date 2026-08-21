@@ -19,9 +19,13 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.yourweather_v2.data.FakeWeatherData
+import com.example.yourweather_v2.data.repository.WeatherRepository
+import com.example.yourweather_v2.model.CurrentWeatherUi
+import com.example.yourweather_v2.model.api.WeatherResponse
 
 @Composable
 fun LocationCard(
+    city: String
 ) {
     Box(
         modifier = Modifier
@@ -50,7 +54,7 @@ fun LocationCard(
                 fontWeight = FontWeight.SemiBold
             )
             Text(
-                text = FakeWeatherData.weather.city,
+                text = city,
                 fontSize = 26.sp,
                 color = Color.Black,
                 fontWeight = FontWeight.SemiBold
